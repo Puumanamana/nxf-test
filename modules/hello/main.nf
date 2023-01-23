@@ -1,5 +1,5 @@
 nextflow.enable.dsl = 2
 
 workflow {
-    Channel.of("hello", "bonjour").view()
+    Channel.fromList(params.hellos).view()
 }
