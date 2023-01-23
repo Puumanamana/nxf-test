@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/Puumanamana/nxf-test/master/nextflow_schema.json",
+  "title": "Puumanamana/nxf-test pipeline parameters",
+  "description": "Some pipeline",
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "integer",
+      "default": 123
+    }
+  }
+}
