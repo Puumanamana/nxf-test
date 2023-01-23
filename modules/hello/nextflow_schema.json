@@ -10,13 +10,19 @@
       "type": "object",
       "fa_icon": "fas fa-terminal",
       "description": "Define where the pipeline should find input data and save output data.",
-      "required": ["outdir"],
+      "required": ["outdir", "csv"],
       "properties": {
         "outdir": {
           "type": "string",
           "format": "directory-path",
           "description": "The output directory where the results will be saved. You have to use absolute paths to storage on Cloud infrastructure.",
           "fa_icon": "fas fa-folder-open"
+        },
+        "csv": {
+          "type": "string",
+          "description": "path to csv file",
+          "format": "file-path",
+          "mimetype": "text/csv"
         }
       }
     }
