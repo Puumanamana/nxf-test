@@ -1,14 +1,15 @@
 nextflow.enable.dsl = 2
 
 process TO_TOWER {
-    container "us-docker.pkg.dev/rome-internal-data/rome-container-repo/cedric-tw-cli"
+    container "us-docker.pkg.dev/rome-pipeline-engine/nxf-container-repo/cedric-tw-cli"
 
     input:
     path metadata
     
     script:
     """
-    tw datasets update -n $params.csv -f $metadata
+    #!/usr/bin/env bash
+    tw datasets update -n test -f $params.csv
     """
 }
 
