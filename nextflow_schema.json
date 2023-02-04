@@ -15,10 +15,21 @@
           "type": "string",
           "pattern": "^\\S+\\.csv$",
           "format": "file-path",
-          "mimetype": "text/csv"
+          "mimetype": "text/csv",
+          "description": "CSV to update"
+        },
+        "name": {
+          "type": "string",
+          "description": "Dataset name",
+          "default": "test-dataset"
+        },
+        "workspace": {
+          "type": "string",
+          "description": "Tower workspace id",
+          "default": "rome-tx/cedric-test"
         }
       },
-      "required": ["csv"]
+      "required": ["csv", "name", "workspace"]
     }
   },
   "allOf": [
