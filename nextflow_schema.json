@@ -1,13 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/Puumanamana/nxf-test/master/nextflow_schema.json",
-  "title": "Puumanamana/nxf-test pipeline parameters",
-  "description": "Some pipeline",
+  "$id": "https://raw.githubusercontent.com/./master/nextflow_schema.json",
+  "title": ". pipeline parameters",
+  "description": "",
   "type": "object",
-  "properties": {
-    "x": {
-      "type": "integer",
-      "default": 123
+  "definitions": {
+    "inputs": {
+      "title": "Inputs",
+      "type": "object",
+      "description": "",
+      "default": "",
+      "properties": {
+        "csv": {
+          "type": "string",
+          "pattern": "^\\S+\\.csv$",
+          "format": "file-path",
+          "mimetype": "text/csv"
+        }
+      },
+      "required": ["csv"]
     }
-  }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/inputs"
+    }
+  ]
 }
